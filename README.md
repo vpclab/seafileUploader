@@ -12,11 +12,11 @@ You can view the example by executing `python seafileUploader/example.py` in the
 
 Things that the uploader requires to work:
 
-* Local files directory
-* Remote files directory
-* Seafile repository ID
-* Seafile server username
-* Seafile server password
+* **Local** files directory
+* **Remote** files directory
+* Seafile repository **ID**
+* Seafile server **username**
+* Seafile server **password**
 
 This information can be given to the uploader in the form of an ini config file:
 
