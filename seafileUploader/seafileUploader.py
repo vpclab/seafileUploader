@@ -196,10 +196,12 @@ class SeafileUploader(QtCore.QObject):
 			configFilePath ([obj] path, None): Path to the config file. The SeafileUploader will take keyword arguments form this file following .ini methods.
 
 		Keyword Parameters:
-			path (str): Path to upload file to the seafile repository.
-			repoID (str): Repository ID given from the seafile server.
+			local_path (str): Path (usually a folder) to upload all files to the Seafile repo.
+			remote_path (str): Path to place these files on the Seafile repo.
+			repo_id (str): Repository ID given from the seafile library.
 			username (str): Username for the account that you are uploading files from. Reccomend to use a specific account (Not your own) to upload files from).
 			password (str): Password for the account that you are uploading files from.
+			[resting_path] (str, 'uploaded'): Path to place the files once they have been uploaded. This is relative to the local files path.
 		'''
 		super().__init__(parent)
 
