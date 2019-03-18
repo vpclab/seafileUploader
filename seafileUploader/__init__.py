@@ -1,1 +1,3 @@
-from . import __main__
+#!/usr/bin/env python36
+
+import seafileUploader
