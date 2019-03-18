@@ -68,7 +68,7 @@ class UploadThread(QtCore.QThread):
 
 		# Returning the new upload link
 		return requests.get(
-			f'https://drive.vpclab.com/api2/repos/{self.repoID}/upload-link/?p={path}',
+			f'https://drive.vpclab.com/api2/repos/{self.repoID}/upload-link/?p=/{path}',
 			headers={'Authorization': f'Token {self.token}'},
 		)
 
@@ -78,7 +78,7 @@ class UploadThread(QtCore.QThread):
 
 		# Posting request for new directory
 		mkdirRequest = requests.post(
-			f'https://drive.vpclab.com/api2/repos/{self.repoID}/dir/?p={path}',
+			f'https://drive.vpclab.com/api2/repos/{self.repoID}/dir/?p=/{path}',
 			data={'operation': 'mkdir'},
 			headers={'Authorization': f'Token {self.token}'},
 		)
